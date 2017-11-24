@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uaV-og-896">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="E0I-uM-Ivm">
+            <objects>
+                <navigationController id="uaV-og-896" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kIH-SQ-sOa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="c6O-rw-p28" kind="relationship" relationship="rootViewController" id="3nO-y8-tCU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rIR-t8-i7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783" y="43"/>
+        </scene>
+        <!--View ControllerYE4 Item1VC-->
+        <scene sceneID="mlg-aP-a3Z">
+            <objects>
+                <viewController id="c6O-rw-p28" customClass="ViewController_Y_E_4_Item1VC" customModule="TestAnyThing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fx7-s7-lrR"/>
+                        <viewControllerLayoutGuide type="bottom" id="2ET-mK-1Lp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EqY-AS-lgj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Dsn-JH-oeI" appends="YES" id="3QM-oJ-QBq"/>
+                            <outletCollection property="gestureRecognizers" destination="X9U-O6-8XH" appends="YES" id="4F7-tj-8yL"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="USV-s4-bQ6">
+                        <barButtonItem key="leftBarButtonItem" title="⚙️" id="2Ik-4H-tkE">
+                            <connections>
+                                <action selector="menuClick:" destination="c6O-rw-p28" id="UvV-H4-iog"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="btc-vU-Skf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="Dsn-JH-oeI">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="handleEdgePanGesture:" destination="c6O-rw-p28" id="ITZ-aL-Cf4"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+                <tapGestureRecognizer id="X9U-O6-8XH">
+                    <connections>
+                        <action selector="handleTapGesture:" destination="c6O-rw-p28" id="IAs-UN-mnx"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1669" y="45"/>
+        </scene>
+    </scenes>
+</document>

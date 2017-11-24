@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="c3p-5v-V7i">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller713-->
+        <scene sceneID="UPT-W8-T0I">
+            <objects>
+                <viewController id="c3p-5v-V7i" customClass="ViewController_7_13" customModule="TestAnyThing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZGj-v0-tLA"/>
+                        <viewControllerLayoutGuide type="bottom" id="nkx-ex-ac8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ilg-4G-I7T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MwG-Ig-IG4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="608"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="c3p-5v-V7i" id="vh7-FR-zab"/>
+                                </connections>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d68-pQ-ttd">
+                                <rect key="frame" x="139" y="28" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0P-GQ-NSz">
+                                <rect key="frame" x="16" y="15" width="66" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="onSearchClick:" destination="c3p-5v-V7i" eventType="touchUpInside" id="SFL-tk-npL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0D-OB-nJw">
+                                <rect key="frame" x="210" y="617" width="31" height="30"/>
+                                <state key="normal" title="標準"/>
+                                <connections>
+                                    <action selector="onStandard:" destination="c3p-5v-V7i" eventType="touchUpInside" id="Gnt-I0-yu7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfE-t7-IYM">
+                                <rect key="frame" x="269" y="617" width="31" height="30"/>
+                                <state key="normal" title="衛星"/>
+                                <connections>
+                                    <action selector="onSatellite:" destination="c3p-5v-V7i" eventType="touchUpInside" id="Jy5-6U-FfX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LY1-eA-rPr">
+                                <rect key="frame" x="328" y="617" width="31" height="30"/>
+                                <state key="normal" title="混合"/>
+                                <connections>
+                                    <action selector="onHybrid:" destination="c3p-5v-V7i" eventType="touchUpInside" id="f0T-oN-x7N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nkx-ex-ac8" firstAttribute="top" secondItem="G0D-OB-nJw" secondAttribute="bottom" constant="20" id="3KN-1X-V3v"/>
+                            <constraint firstItem="nkx-ex-ac8" firstAttribute="top" secondItem="LY1-eA-rPr" secondAttribute="bottom" constant="20" id="Oiq-o7-7uk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LY1-eA-rPr" secondAttribute="trailing" constant="149" id="cTg-xf-D1H"/>
+                            <constraint firstItem="dfE-t7-IYM" firstAttribute="leading" secondItem="G0D-OB-nJw" secondAttribute="trailing" constant="28" id="ffc-k8-fDl"/>
+                            <constraint firstItem="LY1-eA-rPr" firstAttribute="leading" secondItem="dfE-t7-IYM" secondAttribute="trailing" constant="28" id="kGn-g0-6bl"/>
+                            <constraint firstItem="nkx-ex-ac8" firstAttribute="top" secondItem="dfE-t7-IYM" secondAttribute="bottom" constant="20" id="nWx-dL-qEV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="MwG-Ig-IG4" id="JO5-Yp-nUg"/>
+                        <outlet property="searchLabel" destination="d68-pQ-ttd" id="5Ex-h0-EiE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vHF-oM-nGj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.80000000000001" y="94.002998500749626"/>
+        </scene>
+    </scenes>
+</document>

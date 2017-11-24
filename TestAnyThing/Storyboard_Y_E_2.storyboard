@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="N5J-SG-MbG">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View ControllerYE2-->
+        <scene sceneID="I60-Zf-or5">
+            <objects>
+                <viewController id="N5J-SG-MbG" customClass="ViewController_Y_E_2" customModule="TestAnyThing" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fqo-xv-45i"/>
+                        <viewControllerLayoutGuide type="bottom" id="XKi-h9-ZUS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OSV-Bv-EhJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0N-9v-IUq">
+                                <rect key="frame" x="48" y="48" width="46" height="30"/>
+                                <state key="normal" title="請選擇"/>
+                                <connections>
+                                    <action selector="selectClick:" destination="N5J-SG-MbG" eventType="touchUpInside" id="Yhg-O8-BSA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="p0N-9v-IUq" firstAttribute="leading" secondItem="OSV-Bv-EhJ" secondAttribute="leadingMargin" constant="28" id="0i3-1a-9kx"/>
+                            <constraint firstItem="p0N-9v-IUq" firstAttribute="top" secondItem="Fqo-xv-45i" secondAttribute="bottom" constant="28" id="huJ-Zz-inN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="p0N-9v-IUq" id="Nsb-r4-Pm0"/>
+                        <outlet property="myView" destination="leE-GC-gLB" id="xxA-xE-n21"/>
+                        <outlet property="pickerView" destination="IlO-ug-oOa" id="mPZ-gc-woE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ymh-oi-F6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="leE-GC-gLB">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IlO-ug-oOa">
+                            <rect key="frame" x="0.0" y="33" width="240" height="80"/>
+                            <connections>
+                                <outlet property="dataSource" destination="N5J-SG-MbG" id="g66-0f-qqu"/>
+                                <outlet property="delegate" destination="N5J-SG-MbG" id="CdB-xu-0VH"/>
+                            </connections>
+                        </pickerView>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sch-IZ-XVI">
+                            <rect key="frame" x="202" y="3" width="31" height="30"/>
+                            <state key="normal" title="完成"/>
+                            <connections>
+                                <action selector="doneClick:" destination="N5J-SG-MbG" eventType="touchUpInside" id="l0d-GB-zne"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="IlO-ug-oOa" secondAttribute="trailing" id="OPo-tF-aol"/>
+                        <constraint firstItem="IlO-ug-oOa" firstAttribute="top" secondItem="leE-GC-gLB" secondAttribute="top" constant="33" id="bso-Rw-JMz"/>
+                        <constraint firstItem="IlO-ug-oOa" firstAttribute="leading" secondItem="leE-GC-gLB" secondAttribute="leading" id="lej-DQ-sZh"/>
+                        <constraint firstAttribute="trailing" secondItem="Sch-IZ-XVI" secondAttribute="trailing" constant="7" id="pa6-hk-rP1"/>
+                        <constraint firstAttribute="bottom" secondItem="IlO-ug-oOa" secondAttribute="bottom" constant="15" id="uqD-W3-kEZ"/>
+                        <constraint firstItem="Sch-IZ-XVI" firstAttribute="top" secondItem="leE-GC-gLB" secondAttribute="top" constant="5" id="z1M-5o-76Y"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="15" y="64"/>
+        </scene>
+    </scenes>
+</document>
