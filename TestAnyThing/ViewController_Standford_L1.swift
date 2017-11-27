@@ -12,9 +12,7 @@ class ViewController_Standford_L1: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("test commit!!")
-
+    
         // Do any additional setup after loading the view.
     }
 
