@@ -10,19 +10,25 @@ import UIKit
 
 class ViewController_Standford_L2: UIViewController {
     
-    lazy var game = Concentration(numberOfPairsOfCards: (self.cardButtons.count + 1) / 2)
+    private lazy var game:Concentration =
+        Concentration(numberOfPairsOfCards: self.numberOfPairsOfCards)
     
-    var flipCount: Int = 0 {
+    var numberOfPairsOfCards:Int {
+        return(self.cardButtons.count + 1) / 2
+    }
+    
+
+    private(set) var flipCount: Int = 0 {
         didSet {
             flipCountLabel.text = "Flips: \(flipCount)"
         }
     }
     
-    @IBOutlet weak var flipCountLabel: UILabel!
+    @IBOutlet private weak var flipCountLabel: UILabel!
     
-    @IBOutlet var cardButtons: [UIButton]!
+    @IBOutlet private var cardButtons: [UIButton]!
     
-    @IBAction func touchCard(_ sender: UIButton) {
+    @IBAction private func touchCard(_ sender: UIButton) {
         flipCount += 1
         if let cardNumber = cardButtons.index(of: sender){
             game.chooseCard(at: cardNumber)
@@ -33,7 +39,7 @@ class ViewController_Standford_L2: UIViewController {
         
     }
     
-    func updateViewFromModel()
+    private func updateViewFromModel()
     {
         for index in cardButtons.indices
         {
@@ -53,11 +59,11 @@ class ViewController_Standford_L2: UIViewController {
         }
     }
     
-    var emojiChoices = ["🦇","😱", "🙀", "👿", "🎃", "👻", "🍭", "🍬","🍎"]
+    private var emojiChoices = ["🦇","😱", "🙀", "👿", "🎃", "👻", "🍭", "🍬","🍎"]
     
-    var emoji = [Int:String]()
+    private var emoji = [Int:String]()
 
-    func emoji(for card: Card) ->String
+    private func emoji(for card: Card) ->String
     {
         if emoji[card.identifier] == nil, emojiChoices.count > 0 {
             let randomIndex = Int(arc4random_uniform(UInt32(emojiChoices.count)))
@@ -66,7 +72,7 @@ class ViewController_Standford_L2: UIViewController {
         
         return emoji[card.identifier] ?? "?"
     }
-    
+
     func flipCard(withEmoji emoji: String, on button: UIButton)
     {
         print("flipCard(withEmoji: \(emoji))")
@@ -82,3 +88,16 @@ class ViewController_Standford_L2: UIViewController {
         }
     }
 }
+
+extension Int {
+    var arc4random: Int {
+        if self > 0 {
+            return Int(arc4random_uniform(UInt32(self)))
+        } else if self < 0 {
+            return -Int(arc4random_uniform(UInt32(self)))
+        } else {
+            return 0
+        }
+    }
+}
+
